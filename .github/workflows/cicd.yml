@@ -1,1 +1,16 @@
 #ci cd yaml file
+
+name: CICD pipeline
+
+on:
+  Push:
+
+jobs:
+  code:
+    uses:  ./.github/workflows/code.yml #workflow_call
+  build:
+    uses: ./.github/workflows/build.yml  #workflow_call
+  test:
+    uses: ./.github/workflows/test.yml  #workflow_call
+  deploy:
+    uses:  ./.github/workflows/deploy.yml  
