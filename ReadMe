@@ -1,0 +1,3 @@
+Hi Everyone,
+
+This is a repository of a project I am developing. I will be Deploying a code using Github actions and argo CD to AWS infrastructure. I will use Terraform, AWS, ec2, argoCD and Github actions for this.
