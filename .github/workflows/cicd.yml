@@ -6,11 +6,18 @@ on:
   Push:
 
 jobs:
+
   code:
     uses:  ./.github/workflows/code.yml #workflow_call
+    
   build:
+    needs:  code
     uses: ./.github/workflows/build.yml  #workflow_call
+    
   test:
+    needs:  build
     uses: ./.github/workflows/test.yml  #workflow_call
+    
   deploy:
+    needs:  test
     uses:  ./.github/workflows/deploy.yml  
